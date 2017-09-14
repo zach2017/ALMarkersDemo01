@@ -20,8 +20,17 @@
                     <connections>
                         <outlet property="WebView" destination="2BG-WL-JVn" id="name-outlet-2BG-WL-JVn"/>
                     </connections>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="1421"/>
+                        <barButtonItem title="Item" id="1422">
+                            <connections>
+                                <action selector="UIBarButtonItem1422_Activated:" destination="BYZ-38-t0r" id="1423"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <containerView contentMode="scaleToFill" id="204" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">

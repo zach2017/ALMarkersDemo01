@@ -82,6 +82,12 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Model1.cs" />
@@ -94,6 +100,7 @@
     <Compile Include="WebViewController.designer.cs">
       <DependentUpon>WebViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="JsonModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\RazorView.cshtml">
@@ -105,7 +112,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Views\OpenLayers.js" />
     <None Include="Resources\OpenLayers.js" />
-    <None Include="Views\EmptyHTMLFile.html" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -117,6 +124,9 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\TemplateMap.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

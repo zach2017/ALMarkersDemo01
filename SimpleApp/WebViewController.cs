@@ -26,15 +26,25 @@ namespace SimpleApp
 
             // Render the view from the type generated from RazorView.cshtml
             var model = new Model1 { Text = "Text goes here" };
-            var template = new RazorView { Model = model };
-            var page = template.GenerateString();
-
+            //var template = new RazorView { Model = model };
+          
+  
             // Load the rendered HTML into the view with a base URL 
             // that points to the root of the bundled Resources folder
-            WebView.LoadHtmlString(page, NSBundle.MainBundle.BundleUrl);
+            // WebView.LoadHtmlString(page, NSBundle.MainBundle.BundleUrl);
+            string htmlstring = "<h1>Hello</h1>" + System.IO.File.ReadAllText("TemplateMap.html");
+        
+			var directories = System.IO.Directory.EnumerateDirectories("./");
 
-            // Perform any additional setup after loading the view, typically from a nib.
-        }
+			foreach (var directory in directories)
+			{
+				Console.WriteLine(directory);
+				htmlstring += directory + "<br>";
+			}
+
+			WebView.LoadHtmlString(htmlstring, NSBundle.MainBundle.BundleUrl);
+			// Perform any additional setup after loading the view, typically from a nib.
+		}
 
         public override void DidReceiveMemoryWarning()
         {
